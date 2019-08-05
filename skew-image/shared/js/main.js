@@ -91,6 +91,7 @@ Element.prototype.get = function(Object = null) { //get
     this.$body = $("body");
     this.$loaderWrapper = $(".loader-wrapper");
     this.$container = $(".container");
+    this.$section = $("section");
     //extend
     if(Object != null) {
         object.extend(this, Object);
