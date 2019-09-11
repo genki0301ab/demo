@@ -1,0 +1,20 @@
+//====================
+// common
+//====================
+$bgColor: #fff;
+$fontColor: #000;
+$linkColor: #000;
+$hoverColor: #000;
+$maxWidth: 769;
+$breakPoint: $maxWidth + px;
+
+//====================
+// function
+//====================
+@function lineHeight($lineHeight, $fontSize) { /* 行の高さ調節に使用 */
+	@return calc(#{$lineHeight + $fontSize}); /* 単位無し */
+}
+
+@function vw($value) { /* サイト幅に応じた要素の比率調節に使用 */
+	@return ($value / $maxWidth) * 100 + vw; /* 単位(vw) */
+}

@@ -1,0 +1,28 @@
+.main-wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.main-wrapper .main {
+  width: 100%;
+  height: auto;
+}
+
+.main-wrapper .main .front-wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.main-wrapper .main .front-wrapper .front {
+  width: 100%;
+  height: auto;
+}
+
+.main-wrapper .main .front-wrapper .front .canvas-wrapper {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}

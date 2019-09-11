@@ -1,0 +1,222 @@
+@keyframes rotateAnimation {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+html,
+body {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: auto;
+  font-family: 'Noto Sans Japanese', serif;
+  color: #000;
+  font-size: 16px;
+  background-color: #fff;
+  text-size-adjust: 100%;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:link {
+  color: #000;
+}
+
+a:hover {
+  color: #000;
+}
+
+a:visited {
+  color: #000;
+}
+
+a:active {
+  color: #000;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+input,
+textarea,
+select {
+  display: block;
+  appearance: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 0;
+}
+
+section {
+  z-index: 0;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  margin-bottom: 8.74887vw;
+  padding: 200px 0px;
+  width: 100%;
+  height: auto;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+section:nth-of-type(odd) {
+  transform-origin: top right;
+  transform: skewY(-5deg);
+}
+
+section:nth-of-type(odd):before {
+  transform-origin: top right;
+  transform: skewY(5deg);
+  background-image: url("https://images.ctfassets.net/bl73eiperqoo/71K9WVobJbh2lJktgYOin2/672d4de36d849c6c78d62e09a6dd0c24/in-austin-with-magic-leap.png");
+}
+
+section:nth-of-type(odd) .section-inner {
+  transform: skewY(5deg);
+}
+
+section:nth-of-type(even) {
+  transform-origin: top left;
+  transform: skewY(5deg);
+}
+
+section:nth-of-type(even):before {
+  transform-origin: top left;
+  transform: skewY(-5deg);
+  background-image: url("https://venturebeat.com/wp-content/uploads/2018/08/Final_Family_Shot_3x.png.jpeg?fit=2880%2C1932&strip=all");
+}
+
+section:nth-of-type(even) .section-inner {
+  transform: skewY(-5deg);
+}
+
+section:before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: calc(100% + 8.74887vw);
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+section .section-inner {
+  margin: auto;
+  width: 960px;
+  height: auto;
+  line-height: calc(26px);
+}
+
+section .section-inner h2 {
+  margin-bottom: 20px;
+}
+
+.cube {
+  z-index: 100;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  perspective: 1000px;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  animation: rotateAnimation 1s ease-in-out infinite;
+}
+
+.cube .cube-inner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.cube .front {
+  background-color: rgba(255, 0, 0, 0.5);
+  transform: translateZ(50px);
+}
+
+.cube .back {
+  background-color: rgba(0, 255, 0, 0.5);
+  transform: translateZ(-50px);
+}
+
+.cube .top {
+  background-color: rgba(0, 0, 255, 0.5);
+  transform: translateY(-50px) rotateX(90deg);
+}
+
+.cube .bottom {
+  background-color: rgba(255, 255, 0, 0.5);
+  transform: translateY(50px) rotateX(90deg);
+}
+
+.cube .left {
+  background-color: rgba(0, 255, 255, 0.5);
+  transform: translateX(-50px) rotateY(90deg);
+}
+
+.cube .right {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translateX(50px) rotateY(90deg);
+}
+
+.loader-wrapper {
+  z-index: 100;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  opacity: 1.0;
+}
+
+.loader-wrapper .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  width: 100%;
+  height: auto;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.br {
+  content: "\A";
+  display: block;
+  white-space: pre;
+}

@@ -1,0 +1,89 @@
+@import "./lib.scss";
+
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+html ,
+body {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: auto;
+	font-family: 'Noto Sans Japanese', serif;
+	color: $fontColor;
+	font-size: 16px;
+	background-color: $bgColor;
+	text-size-adjust: 100%;
+}
+
+a {
+	color: $linkColor;
+	text-decoration: none;
+	&:link {
+		color: $hoverColor;
+	}
+	&:hover {
+		color: $hoverColor;
+	}
+	&:visited {
+		color: $hoverColor;
+	}
+	&:active {
+		color: $hoverColor;
+	}
+}
+
+ul ,
+li {
+	list-style: none;
+}
+
+input,
+textarea,
+select {
+    display: block;
+	appearance: none;
+	&:focus {
+		outline: 0;
+	}
+}
+
+.loader-wrapper {
+    z-index: 100;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100vh;
+	background: #fff;
+	opacity: 1.0;
+	.loader {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		display: block;
+		transform: translate(-50% , -50%);
+	}
+}
+
+.container {
+    min-width: $breakPoint;
+	width: 100%;
+	height: auto;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.br {
+	content: "\A";
+	display: block;
+	white-space: pre;
+}

@@ -1,0 +1,132 @@
+.video-player {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: auto;
+}
+
+.video-player button {
+  padding: 0px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.video-player video {
+  width: 100%;
+  display: none;
+  visibility: hidden;
+}
+
+.video-player .controls-wrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.video-player .controls-wrapper .controls {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  min-height: 30px;
+  height: 5%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.video-player .controls-wrapper .controls .align-left {
+  width: auto;
+  height: 100%;
+  float: left;
+}
+
+.video-player .controls-wrapper .controls .align-left .toggle-play button {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  width: 30px;
+  height: 30px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.video-player .controls-wrapper .controls .align-left .toggle-play button i {
+  line-height: 30px;
+  text-align: center;
+  font-size: 1.25rem;
+  color: #fff;
+  display: block;
+}
+
+.video-player .controls-wrapper .controls .align-left .toggle-play .controls-pause {
+  display: none;
+}
+
+.video-player .controls-wrapper .controls .align-left .toggle-play .controls-play {
+  display: block;
+}
+
+.video-player .controls-wrapper .controls .align-left .toggle-volume button {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  width: 30px;
+  height: 30px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.video-player .controls-wrapper .controls .align-left .toggle-volume button i {
+  line-height: 30px;
+  text-align: center;
+  font-size: 1.25rem;
+  color: #fff;
+  display: block;
+}
+
+.video-player .controls-wrapper .controls .align-left .toggle-volume .controls-volume-off {
+  display: none;
+}
+
+.video-player .controls-wrapper .controls .align-left .toggle-volume .ontrols-volume-on {
+  display: block;
+}
+
+.video-player .controls-wrapper .controls .align-center .time {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 0.75rem;
+  color: #fff;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.video-player .controls-wrapper .controls .align-right {
+  float: right;
+}
+
+.video-player .controls-wrapper .controls .align-right .controls-fullScreen {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.video-player .controls-wrapper .controls .align-right .controls-fullScreen i {
+  line-height: 30px;
+  text-align: center;
+  font-size: 1.25rem;
+  color: #fff;
+  display: block;
+}

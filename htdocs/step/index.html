@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Step</title>
+
+    <link rel="stylesheet" type="text/css" href="common.css">
+</head>
+
+<body>
+<div id="Main" class="column1">
+            <div id="VisualBg">
+    <div id="canvas-wrapper" data-page="top">
+        <audio id="step-audio"></audio>
+    </div>
+    <div class="first-music-button-wrapper">
+        <span class="first-music-button music-first"></span>
+        <p class="play-text">Play Music</p>
+    </div>
+    <ul class="music-button-wrapper">
+        <li class="music-button music-back"></li>
+        <li class="music-button music-pause" data="pause"></li>
+        <li class="music-button music-next"></li>
+    </ul>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/91/three.min.js"></script>
+<script src="js/webgl/OBJLoader.js"></script>
+<script src="js/webgl/CopyShader.js"></script>
+<script src="js/webgl/EffectComposer.js"></script>
+<script src="js/webgl/ShaderPass.js"></script>
+<script src="js/webgl/RenderPass.js"></script>
+<script src="js/webgl/SSAARenderPass.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.1.0/d3.js"></script>
+<script src="js/perlin.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/canvas-ver=1.0.js"></script>
+<script>
+$(function() {
+var design = new Design("top");
+});
+</script>
+</body>
+</html>

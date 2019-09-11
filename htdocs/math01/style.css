@@ -1,0 +1,18 @@
+.main-wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.main-wrapper .main {
+  width: 100%;
+  height: auto;
+}
+
+.main-wrapper .main .canvas-wrapper {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}

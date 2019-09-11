@@ -1,0 +1,145 @@
+@import "./shared/css/lib.scss";
+
+/*
+@keyframes activeSprite {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 0px -1972px;
+    }
+}
+
+@keyframes passiveSprite {
+    0% {
+        background-position: 0px -1972px;
+    }
+    100% {
+        background-position: 0px 0px;
+    }
+}
+
+.active-sprite {
+    animation: activeSprite 0.65s steps(29) forwards;
+}
+
+.passive-sprite {
+    animation: passiveSprite 0.65s steps(29);
+}
+*/
+
+@keyframes activeSprite {
+    0% {
+        background-position: 0px 19px;
+    }
+    100% {
+        background-position: 0px -1905px;
+    }
+}
+
+@keyframes passiveSprite {
+    0% {
+        background-position: 0px -1905px;
+    }
+    100% {
+        background-position: 0px 19px;
+    }
+}
+
+.active-sprite {
+    animation: activeSprite 0.5s steps(60) forwards;
+}
+
+.passive-sprite {
+    animation: passiveSprite 0.5s steps(60);
+}
+
+.main-wrapper {
+    width: 100%;
+    height: auto;
+    .main {
+        width: 100%;
+        height: auto;
+        .front-wrapper {
+            width: 100%;
+            height: auto;
+            .front {
+                width: 100%;
+                height: auto;
+                .card-wrapper {
+                    margin: auto;
+                    width: 1400px;
+                    height: auto;
+                    flex-wrap: wrap;
+                    display: flex;
+                    justify-content: space-between;
+                    .card {
+                        position: relative;
+                        top: 0px;
+                        left: 0px;
+                        margin: 25px;
+                        width: auto;
+                        height: auto;
+                        &__text {
+                            z-index: 1;
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            width: 445px;
+                            height: 30px;
+                            display: block;
+                            background-image: url(./shared/img/helloworld_txt.png);
+                            background-repeat: no-repeat;
+                            transform-origin: center;
+                            transform: translate(-25%, -25%) scale(0.65) rotateZ(-25deg);
+                            transition: opacity 0.3s ease-in-out;
+                        }
+                        /*
+                        &__text {
+                            z-index: 1;
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            width: 200px;
+                            height: 68px;
+                            display: block;
+                            background-image: url(./shared/img/sprite_say_hello.png);
+                            background-repeat: no-repeat;
+                            transform-origin: center;
+                            transform: translate(-25%, -25%) scale(0.85) rotateZ(-25deg);
+                            transition: opacity 0.3s ease-in-out;
+                            filter: invert(100%);
+                        }
+                        */
+                        .img-wrapper {
+                            position: relative;
+                            top: 0px;
+                            left: 0px;
+                            width: 400px;
+                            height: 200px;
+                            transform-style: preserve-3d;
+                            perspective: 1200px;
+                            .photo {
+                                width: 100%;
+                                height: 100%;
+                                display: block;
+                                transform: rotateX(0deg) rotateY(0deg);
+                                transition: transform 0.1s ease-in-out;
+                                overflow: hidden;
+                                img {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    width: 100%;
+                                    height: 100%;
+                                    display: block;
+                                    transform: translate(-50%, -50%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

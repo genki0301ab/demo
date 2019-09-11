@@ -1,0 +1,20 @@
+//====================
+// common
+//====================
+$bgColor: #fff;
+$fontColor: #333;
+$linkColor: #333;
+$hoverColor: #333;
+$breakPoint: 1200;
+$pcWidth: $breakPoint + px;
+
+//====================
+// function
+//====================
+@function between($value) { /* 行間の調節に使用 */
+	@return calc(1em + #{$value * 2});
+}
+
+@function vw($value) { /* サイト幅に応じた要素の比率調節に使用 */
+	@return ($value / $breakPoint) * 100 + vw;
+}

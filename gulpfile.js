@@ -20,38 +20,38 @@ gulp.task("reload" , function() {
 });
 
 gulp.task("html", function() {
-	gulp.src(["./skew-image/**/*html"])
+	gulp.src(["./htdocs/**/*html"])
 		.pipe(plumber())
 		.pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task("sass" , function() {
-	gulp.src(["./skew-image/**/*scss"])
+	gulp.src(["./htdocs/**/*scss"])
 		.pipe(plumber())
 		.pipe(sass({
 			outputStyle: "expanded"
 		}))
-		.pipe(gulp.dest("./skew-image/"))
+		.pipe(gulp.dest("./htdocs/"))
 		.pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task("php" , function() {
-	gulp.src(["./skew-image/**/*php"])
+	gulp.src(["./htdocs/**/*php"])
 		.pipe(plumber())
 		.pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task("javascript" , function() {
-	gulp.src(["./skew-image/**/*js"])
+	gulp.src(["./htdocs/**/*js"])
 		.pipe(plumber())
 		.pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task("watch" , function() {
-	gulp.watch(["./skew-image/**/*html"] , ["html"]);
-	gulp.watch(["./skew-image/**/*php"] , ["php"]);
-	gulp.watch(["./skew-image/**/*scss"] , ["sass"]);
-	gulp.watch(["./skew-image/**/*js"] , ["javascript"]);
+	gulp.watch(["./htdocs/**/*html"] , ["html"]);
+	gulp.watch(["./htdocs/**/*php"] , ["php"]);
+	gulp.watch(["./htdocs/**/*scss"] , ["sass"]);
+	gulp.watch(["./htdocs/**/*js"] , ["javascript"]);
 });
 
 gulp.task("default" , ["browser-sync" , "watch"]); 

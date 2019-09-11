@@ -1,0 +1,136 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+html,
+body {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: auto;
+  color: #333;
+  font-family: "Sawarabi Gothic";
+  font-size: 16px;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:link {
+  color: #333;
+}
+
+a:hover {
+  color: #333;
+}
+
+a:visited {
+  color: #333;
+}
+
+a:active {
+  color: #333;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+input,
+textarea,
+select {
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 0;
+}
+
+.container {
+  min-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.br {
+  content: "\A";
+  display: block;
+  white-space: pre;
+}
+
+.vr-video-wrapper {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  background-color: #000;
+}
+
+.vr-video-wrapper .vr-video {
+  display: none;
+  visibility: hidden;
+}
+
+.vr-video-wrapper .vr-canvas-wrapper {
+  margni: auto;
+  width: 100%;
+  height: auto;
+}
+
+.controls-wrapper {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: auto;
+  background-color: #ccc;
+}
+
+.controls-wrapper .controls {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 40px;
+}
+
+.controls-wrapper .controls .controls-progress {
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  width: 100%;
+  height: 10px;
+  background-color: #000;
+}
+
+.controls-wrapper .controls .align-left {
+  float: left;
+}
+
+.controls-wrapper .controls .align-right {
+  float: right;
+}
