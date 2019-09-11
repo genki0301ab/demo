@@ -1,0 +1,166 @@
+@import "./lib.scss";
+
+@keyframes gnaviActive {
+    0% {
+        transform: translateX(100%) skew(10deg);
+        opacity: 0.0;
+    }
+    100% {
+        transform: translateX(0%) skew(0deg);
+        opacity: 1.0;
+    }
+}
+
+@keyframes gnaviPassive {
+    0% {
+        transform: translateX(0%) skew(0deg);
+        opacity: 1.0;
+    }
+    100% {
+        transform: translateX(100%) skew(-10deg);
+        opacity: 0.0;
+    }
+}
+
+.header-wrapper {
+    width: 100%;
+    height: auto;
+    .header {
+        width: 100%;
+        height: auto;
+        .toggle-button-wrapper {
+            z-index: 100;
+            position: fixed;
+            top: 50px;
+            right: 50px;
+            width: 65px;
+            height: 65px;
+            background-color: rgba(10, 56, 84, 1.0);
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+            .toggle-button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 50%;
+                height: 50%;
+                transform: translate(-50%, -50%);
+                div {
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    opacity: 1.0;
+                    transition: 0.3s ease-in-out;
+                    &:first-child {
+                        top: 0%;
+                        left: 0%;
+                    }
+                    &:nth-child(2) {
+                        top: 50%;
+                        left: 0%;
+                        transform: translateY(-50%);
+                    }
+                    &:last-child {
+                        bottom: 0%;
+                        left: 0%;
+                    }
+                    span {
+                        position: absolute;
+                        width: 1px;
+                        height: 1px;
+                        display: block;
+                        background-color: #fff;
+                        transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+                        &:first-child {
+                            top: 0%;
+                            left: 0%;
+                        }
+                        &:nth-child(2) {
+                            top: 0%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                        &:last-child {
+                            top: 0%;
+                            right: 0%;
+                        }
+                    }
+                }
+                .bar__active {
+                    &:first-child {
+                        top: 50%;
+                        transform: translateY(-50%) rotate(45deg);
+                        span {
+                            &:first-child {
+                                width: 100%;
+                            }
+                            &:not(:first-child) {
+                                opacity: 0.0;
+                            }
+                        }
+                    }
+                    &:nth-child(2) {
+                        opacity: 0.0;
+                    }
+                    &:last-child {
+                        bottom: 50%;
+                        transform: translateY(50%) rotate(-45deg);
+                         span {
+                            &:first-child {
+                                width: 100%;
+                            }
+                            &:not(:first-child) {
+                                opacity: 0.0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .toggle-button-wrapper__active {
+            background-color: rgba(10, 56, 84, 0.0);
+        }
+        .gnavi-wrapper {
+            z-index: 10;
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            width: 500px;
+            height: 100vh;
+            background-color: rgb(164, 181, 191);
+            transform: translateX(100%) skewX(0deg);
+            opacity: 0.0;
+            overflow: hidden;
+            .gnavi {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: auto;
+                height: auto;
+                transform: translate(-50%, -50%);
+                li {
+                    opacity: 0.0;
+                    transform: translateX(-25%) scale(1.25);
+                    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+                    &:not(:last-child) {
+                        margin-bottom: 40px;
+                    }
+                    a {
+                        font-size: 1.25em;
+                        color: #fff;
+                    }
+                }
+                .list__active {
+                    transform: translateX(0%) scale(1.0);
+                    opacity: 1.0;
+                }
+            }
+        }
+        .gnavi-wrapper__passive {
+            animation: gnaviPassive 0.45s ease-in-out forwards;
+        }
+        .gnavi-wrapper__active {
+            animation: gnaviActive 0.45s ease-in-out forwards;
+        }
+    }
+}

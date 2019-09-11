@@ -1,0 +1,128 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+html,
+body {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: auto;
+  font-family: 'Noto Sans Japanese', serif;
+  color: #000;
+  font-size: 16px;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+a {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: pink;
+  -webkit-text-decoration: under-line;
+  text-decoration: under-line;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+a:link {
+  color: pink;
+}
+
+a:hover {
+  color: pink;
+}
+
+a:visited {
+  color: pink;
+}
+
+a:active {
+  color: pink;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+input,
+textarea,
+select {
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 0;
+}
+
+img {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  display: block;
+}
+
+.loader-wrapper {
+  z-index: 10000;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  opacity: 1.0;
+}
+
+.loader-wrapper .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.jump-layer {
+  z-index: 1000;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 0vw;
+  height: 100vh;
+  background-color: #ccc;
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+.container {
+  min-width: 769px;
+  width: 100%;
+  height: 100vh;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.br {
+  content: "\A";
+  display: block;
+  white-space: pre;
+}
