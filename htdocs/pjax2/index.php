@@ -1,4 +1,4 @@
-<?
+<?php
     $siteSetting = Array(
         "type" => "top",
         "title" => "トップ",
