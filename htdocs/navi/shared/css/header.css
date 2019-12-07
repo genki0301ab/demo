@@ -1,50 +1,20 @@
-@-webkit-keyframes gnaviActive {
-  0% {
-    -webkit-transform: translateX(100%) skew(10deg);
-    transform: translateX(100%) skew(10deg);
-    opacity: 0.0;
-  }
-  100% {
-    -webkit-transform: translateX(0%) skew(0deg);
-    transform: translateX(0%) skew(0deg);
-    opacity: 1.0;
-  }
-}
-
 @keyframes gnaviActive {
   0% {
-    -webkit-transform: translateX(100%) skew(10deg);
     transform: translateX(100%) skew(10deg);
     opacity: 0.0;
   }
   100% {
-    -webkit-transform: translateX(0%) skew(0deg);
     transform: translateX(0%) skew(0deg);
     opacity: 1.0;
-  }
-}
-
-@-webkit-keyframes gnaviPassive {
-  0% {
-    -webkit-transform: translateX(0%) skew(0deg);
-    transform: translateX(0%) skew(0deg);
-    opacity: 1.0;
-  }
-  100% {
-    -webkit-transform: translateX(100%) skew(-10deg);
-    transform: translateX(100%) skew(-10deg);
-    opacity: 0.0;
   }
 }
 
 @keyframes gnaviPassive {
   0% {
-    -webkit-transform: translateX(0%) skew(0deg);
     transform: translateX(0%) skew(0deg);
     opacity: 1.0;
   }
   100% {
-    -webkit-transform: translateX(100%) skew(-10deg);
     transform: translateX(100%) skew(-10deg);
     opacity: 0.0;
   }
@@ -69,7 +39,6 @@
   height: 65px;
   background-color: #0a3854;
   cursor: pointer;
-  -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
 }
 
@@ -79,7 +48,6 @@
   left: 50%;
   width: 50%;
   height: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -88,7 +56,6 @@
   width: 100%;
   height: 1px;
   opacity: 1.0;
-  -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
@@ -100,7 +67,6 @@
 .header-wrapper .header .toggle-button-wrapper .toggle-button div:nth-child(2) {
   top: 50%;
   left: 0%;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -115,7 +81,6 @@
   height: 1px;
   display: block;
   background-color: #fff;
-  -webkit-transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
   transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
@@ -127,7 +92,6 @@
 .header-wrapper .header .toggle-button-wrapper .toggle-button div span:nth-child(2) {
   top: 0%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
@@ -138,7 +102,6 @@
 
 .header-wrapper .header .toggle-button-wrapper .toggle-button .bar__active:first-child {
   top: 50%;
-  -webkit-transform: translateY(-50%) rotate(45deg);
   transform: translateY(-50%) rotate(45deg);
 }
 
@@ -156,7 +119,6 @@
 
 .header-wrapper .header .toggle-button-wrapper .toggle-button .bar__active:last-child {
   bottom: 50%;
-  -webkit-transform: translateY(50%) rotate(-45deg);
   transform: translateY(50%) rotate(-45deg);
 }
 
@@ -180,7 +142,6 @@
   width: 500px;
   height: 100vh;
   background-color: #a4b5bf;
-  -webkit-transform: translateX(100%) skewX(0deg);
   transform: translateX(100%) skewX(0deg);
   opacity: 0.0;
   overflow: hidden;
@@ -192,18 +153,13 @@
   left: 50%;
   width: auto;
   height: auto;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
 .header-wrapper .header .gnavi-wrapper .gnavi li {
   opacity: 0.0;
-  -webkit-transform: translateX(-25%) scale(1.25);
   transform: translateX(-25%) scale(1.25);
-  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .header-wrapper .header .gnavi-wrapper .gnavi li:not(:last-child) {
@@ -216,17 +172,14 @@
 }
 
 .header-wrapper .header .gnavi-wrapper .gnavi .list__active {
-  -webkit-transform: translateX(0%) scale(1);
   transform: translateX(0%) scale(1);
   opacity: 1.0;
 }
 
 .header-wrapper .header .gnavi-wrapper__passive {
-  -webkit-animation: gnaviPassive 0.45s ease-in-out forwards;
   animation: gnaviPassive 0.45s ease-in-out forwards;
 }
 
 .header-wrapper .header .gnavi-wrapper__active {
-  -webkit-animation: gnaviActive 0.45s ease-in-out forwards;
   animation: gnaviActive 0.45s ease-in-out forwards;
 }

@@ -22,7 +22,10 @@
 <script src="/shared/js/lib/velocity.min.js"></script>
 <script src="/shared/js/lib/animatedModal.js"></script>
 <script src="/shared/js/vue.min.js"></script>
-<script>$(".modal-link").animatedModal();</script>
+<script>$(".modal-link").animatedModal({
+	animatedIn: 'bounceInDown',
+	animatedOut: 'bounceOutUp'
+});</script>
 <?php
 //ページ独自のjsファイル読み込み
 foreach ($siteSetting['js'] as $value) {

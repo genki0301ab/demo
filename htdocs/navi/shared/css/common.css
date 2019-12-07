@@ -15,9 +15,6 @@ body {
   color: #000;
   font-size: 16px;
   background-color: #fff;
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
@@ -51,8 +48,6 @@ input,
 textarea,
 select {
   display: block;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
@@ -78,7 +73,6 @@ select:focus {
   top: 50%;
   left: 50%;
   display: block;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 

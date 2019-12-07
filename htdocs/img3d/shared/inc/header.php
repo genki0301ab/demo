@@ -42,6 +42,9 @@
 <div class="container">
 <div class="header-wrapper">
 	<header class="header">
+        <div class="header-inner">
+            <h1>Image3d</h1>
+        </div>
 	</header>
 </div>
 <!-- end header-wrapper -->

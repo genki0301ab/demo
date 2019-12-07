@@ -15,9 +15,6 @@ body {
   color: #000;
   font-size: 16px;
   background-color: #fff;
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
@@ -27,9 +24,7 @@ a {
   top: 50%;
   left: 50%;
   color: pink;
-  -webkit-text-decoration: under-line;
   text-decoration: under-line;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -58,8 +53,6 @@ input,
 textarea,
 select {
   display: block;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
@@ -93,7 +86,6 @@ img {
   top: 50%;
   left: 50%;
   display: block;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -105,7 +97,6 @@ img {
   width: 0vw;
   height: 100vh;
   background-color: #ccc;
-  -webkit-transform: translateX(0px);
   transform: translateX(0px);
 }
 

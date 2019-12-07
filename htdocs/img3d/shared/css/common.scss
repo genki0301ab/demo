@@ -70,7 +70,7 @@ select {
 }
 
 .container {
-    min-width: $breakPoint;
+    min-width: 1400px;
 	width: 100%;
 	height: auto;
 }
@@ -85,4 +85,14 @@ select {
 	content: "\A";
 	display: block;
 	white-space: pre;
+}
+
+@media screen and (max-width: 760px) {
+
+.container {
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
 }

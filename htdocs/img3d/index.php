@@ -18,7 +18,7 @@
                 <ul class="card-wrapper">
                     <li class="card">
                         <span class="card__text"></span>
-                        <div class="img-wrapper"><a class="photo" href="#"><img src="./img/img01.jpg"></a></div>
+                        <div class="img-wrapper"><a class="photo" href="https://yahoo.co.jp" target="_blank"><img src="./img/img01.jpg"></a></div>
                     </li>
                     <li class="card">
                         <span class="card__text"></span>

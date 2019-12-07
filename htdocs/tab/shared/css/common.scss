@@ -85,6 +85,9 @@ select {
         .modal-content {
         }
         .close-animatedModal {
+        	position: relative;
+        	top: 0px;
+        	left: 0px;
             margin: 20px auto 0px auto;
             padding: 10px;
             width: auto;
@@ -92,7 +95,18 @@ select {
             text-align: center;
             box-sizing: border-box;
             border: solid 1px #000;
+            overflow: hidden;
             cursor: pointer;
+            &:before {
+            	content: "";
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 0%;
+				height: 100%;
+				display: block;
+				background-color: #000;
+            }	
             i {
                 margin-right: 5px;
             }
@@ -116,4 +130,14 @@ select {
 	content: "\A";
 	display: block;
 	white-space: pre;
+}
+
+@media screen and (max-width: 720px) {
+
+.container {
+    min-width: 100%;
+	width: 100%;
+	height: auto;
+}
+
 }

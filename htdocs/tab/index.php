@@ -1,4 +1,4 @@
-<?
+<?php
     $siteSetting = Array(
         "type" => "top",
         "title" => "トップ",
@@ -17,10 +17,12 @@
             <div class="front">
                 <div class="tab-wrapper">
                     <ul class="tab clearfix">
-                        <li class="active"><a href="#タブ01">タブ01</a></li>
-                        <li><a href="#タブ02">タブ02</a></li>
-                        <li><a href="#タブ03">タブ03</a></li>
-                        <li><a href="#タブ04">タブ04</a></li>
+                        <li class="active">タブ01</li>
+                        <li>タブ02</li>
+                        <li>タブ03</li>
+                        <li>タブ04</li>
+                        <li>タブ05</li>
+                        <li>タブ06</li>
                     </ul>
 
                     <div class="content-wrapper">
@@ -40,6 +42,14 @@
                                 </div>
                                 <div class="tab-content content04">
                                     <p>タブ04</p>
+                                    <a class="modal-link" href="#animatedModal">モーダルウィンドウを開く</a>
+                                </div>
+                                <div class="tab-content content04">
+                                    <p>タブ05</p>
+                                    <a class="modal-link" href="#animatedModal">モーダルウィンドウを開く</a>
+                                </div>
+                                <div class="tab-content content04">
+                                    <p>タブ06</p>
                                     <a class="modal-link" href="#animatedModal">モーダルウィンドウを開く</a>
                                 </div>
                             </div>

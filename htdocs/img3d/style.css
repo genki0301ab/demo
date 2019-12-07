@@ -25,30 +25,12 @@
     animation: passiveSprite 0.65s steps(29);
 }
 */
-@-webkit-keyframes activeSprite {
-  0% {
-    background-position: 0px 19px;
-  }
-  100% {
-    background-position: 0px -1905px;
-  }
-}
-
 @keyframes activeSprite {
   0% {
     background-position: 0px 19px;
   }
   100% {
     background-position: 0px -1905px;
-  }
-}
-
-@-webkit-keyframes passiveSprite {
-  0% {
-    background-position: 0px -1905px;
-  }
-  100% {
-    background-position: 0px 19px;
   }
 }
 
@@ -62,12 +44,10 @@
 }
 
 .active-sprite {
-  -webkit-animation: activeSprite 0.5s steps(60) forwards;
   animation: activeSprite 0.5s steps(60) forwards;
 }
 
 .passive-sprite {
-  -webkit-animation: passiveSprite 0.5s steps(60);
   animation: passiveSprite 0.5s steps(60);
 }
 
@@ -95,13 +75,8 @@
   margin: auto;
   width: 1400px;
   height: auto;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -113,6 +88,20 @@
   width: auto;
   height: auto;
   /*
+                        &__text {
+                            z-index: 1;
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            width: 445px;
+                            height: 30px;
+                            display: block;
+                            background-image: url(./shared/img/helloworld_txt.png);
+                            background-repeat: no-repeat;
+                            transform-origin: center;
+                            transform: translate(-25%, -25%) scale(0.65) rotateZ(-25deg);
+                            transition: opacity 0.3s ease-in-out;
+                        }
                         &__text {
                             z-index: 1;
                             position: absolute;
@@ -131,33 +120,13 @@
                         */
 }
 
-.main-wrapper .main .front-wrapper .front .card-wrapper .card__text {
-  z-index: 1;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 445px;
-  height: 30px;
-  display: block;
-  background-image: url(./shared/img/helloworld_txt.png);
-  background-repeat: no-repeat;
-  -webkit-transform-origin: center;
-  transform-origin: center;
-  -webkit-transform: translate(-25%, -25%) scale(0.65) rotateZ(-25deg);
-  transform: translate(-25%, -25%) scale(0.65) rotateZ(-25deg);
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-}
-
 .main-wrapper .main .front-wrapper .front .card-wrapper .card .img-wrapper {
   position: relative;
   top: 0px;
   left: 0px;
   width: 400px;
   height: 200px;
-  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-perspective: 1200px;
   perspective: 1200px;
 }
 
@@ -165,12 +134,8 @@
   width: 100%;
   height: 100%;
   display: block;
-  -webkit-transform: rotateX(0deg) rotateY(0deg);
   transform: rotateX(0deg) rotateY(0deg);
-  -webkit-transition: -webkit-transform 0.1s ease-in-out;
-  transition: -webkit-transform 0.1s ease-in-out;
   transition: transform 0.1s ease-in-out;
-  transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
   overflow: hidden;
 }
 
@@ -181,6 +146,97 @@
   width: 100%;
   height: 100%;
   display: block;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 760px) {
+  .main-wrapper {
+    width: 100%;
+    height: auto;
+  }
+  .main-wrapper .main {
+    width: 100%;
+    height: auto;
+  }
+  .main-wrapper .main .front-wrapper {
+    width: 100%;
+    height: auto;
+  }
+  .main-wrapper .main .front-wrapper .front {
+    width: 100%;
+    height: auto;
+  }
+  .main-wrapper .main .front-wrapper .front .card-wrapper {
+    margin: auto;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-wrapper .main .front-wrapper .front .card-wrapper .card {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    margin: 3.28947vw auto;
+    width: auto;
+    height: auto;
+    /*
+                        &__text {
+                            z-index: 1;
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            width: 445px;
+                            height: 30px;
+                            display: block;
+                            background-image: url(./shared/img/helloworld_txt.png);
+                            background-repeat: no-repeat;
+                            transform-origin: center;
+                            transform: translate(-25%, -25%) scale(0.65) rotateZ(-25deg);
+                            transition: opacity 0.3s ease-in-out;
+                        }
+                        &__text {
+                            z-index: 1;
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            width: 200px;
+                            height: 68px;
+                            display: block;
+                            background-image: url(./shared/img/sprite_say_hello.png);
+                            background-repeat: no-repeat;
+                            transform-origin: center;
+                            transform: translate(-25%, -25%) scale(0.85) rotateZ(-25deg);
+                            transition: opacity 0.3s ease-in-out;
+                            filter: invert(100%);
+                        }
+                        */
+  }
+  .main-wrapper .main .front-wrapper .front .card-wrapper .card .img-wrapper {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 52.63158vw;
+    height: 26.31579vw;
+    transform-style: preserve-3d;
+    perspective: 1200px;
+  }
+  .main-wrapper .main .front-wrapper .front .card-wrapper .card .img-wrapper .photo {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform: rotateX(0deg) rotateY(0deg);
+    transition: transform 0.1s ease-in-out;
+    overflow: hidden;
+  }
+  .main-wrapper .main .front-wrapper .front .card-wrapper .card .img-wrapper .photo img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform: translate(-50%, -50%);
+  }
 }
