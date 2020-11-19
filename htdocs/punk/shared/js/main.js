@@ -17,7 +17,7 @@ function Stage(Object) {
     //property
     this.width = this.root.window.width;
     this.height = this.root.window.height;
-    this.cameraPosition = {x: 0, y: 0, z: 500};
+    this.cameraPosition = {x: 0, y: 0, z: 1};
     this.fogColor = {r: 6, g: 53, b: 59};
     this.clearColor = {r: 4, g: 30, b: 31};
     this.geometries;
@@ -29,10 +29,14 @@ function Stage(Object) {
     this.event();
 }
 Stage.prototype.init = function() { //init
+    let self = this;
     this.createCamera();
     this.createScene_renderer();
-    this.createGeometry();
-    this.update();
+    var loader = new THREE.TextureLoader();
+    var texture = loader.load("sites-3-2017-12-hero-1-1201225626-x05.jpg", function(texture) {
+        self.createGeometry(texture);
+        self.update();
+    });
 };
 Stage.prototype.createCamera = function() { //createCamera
     this.camera = new THREE.PerspectiveCamera(100, this.width / this.height, 0.1 , 500);
@@ -41,26 +45,35 @@ Stage.prototype.createCamera = function() { //createCamera
 };
 Stage.prototype.createScene_renderer = function() { //createScene_renderer
     this.scene = new THREE.Scene();
-    this.scene.fog = new THREE.Fog(new THREE.Color(`rgb(${this.fogColor.r}, ${this.fogColor.g}, ${this.fogColor.b})`), 1, 500);
+    //this.scene.fog = new THREE.Fog(new THREE.Color(`rgb(${this.fogColor.r}, ${this.fogColor.g}, ${this.fogColor.b})`), 1, 500);
     this.renderer = new THREE.WebGLRenderer({antialias: true});
     this.renderer.setClearColor(new THREE.Color(`rgb(${this.clearColor.r}, ${this.clearColor.g}, ${this.clearColor.b})`), 0.5);
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.renderer.setSize(this.width, this.height);
     this.root.element.$canvasWrapper.append(this.renderer.domElement);
 };
-Stage.prototype.createGeometry = function() { //createGeometry
+Stage.prototype.createGeometry = function(texture) { //createGeometry
     //plain
-    var plain = this.root.geometry.createPlane();
+    var plain = this.root.geometry.createPlane(texture);
     this.scene.add(plain);
 };
-Stage.prototype.rendering = function() { //rendering
+Stage.prototype.rendering = function(time) { //rendering
     this.renderer.render(this.scene, this.camera);
+    /*
+    this.scene.children[0].geometry.verticesNeedUpdate = true;
+    for(var i = 0; i < this.scene.children[0].geometry.vertices.length; i++) {
+        this.scene.children[0].geometry.vertices[i].z += Math.sin(time + this.scene.children[0].geometry.vertices[i].x) / 100;
+        this.scene.children[0].geometry.vertices[i].z += Math.sin(time + this.scene.children[0].geometry.vertices[i].y) / 100;
+    }
+    */
 };
 Stage.prototype.update = function() { //update
     var self = this;
+    var time = 0;
     function update() {
+        time += 0.05;
         window.requestAnimationFrame(update);
-        self.rendering();
+        self.rendering(time);
     }
     update();
 };
@@ -89,12 +102,15 @@ function Geometry(Object) { //Geometry
     //extend
     object.extend(this, Object);
 };
-Geometry.prototype.createPlane = function() { //createPlane
-    var geometry = new THREE.PlaneGeometry(1000, 1000, 100, 100);
-    var material = new THREE.MeshBasicMaterial({color: 0xffffff, wireframe: true});
+Geometry.prototype.createPlane = function(texture) { //createPlane
+    var geometry = new THREE.PlaneGeometry(2, 1, 50, 50);
+    var material = new THREE.MeshBasicMaterial({
+        color: 0xffffff,
+        map: texture,
+        wireframe: false,
+    });
     var mesh = new THREE.Mesh(geometry, material);
-    mesh.rotation.x = Math.PI * 0.5;
-    mesh.position.set(0, -50, 0);
+    mesh.position.set(0, 0, 0);
     return mesh;
 };
 

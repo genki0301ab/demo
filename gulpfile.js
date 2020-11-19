@@ -20,38 +20,38 @@ gulp.task("reload" , function() {
 });
 
 gulp.task("html", function() {
-	gulp.src(["./htdocs/tab/**/*html"])
+	gulp.src(["./htdocs/punk/**/*html"])
 		.pipe(plumber())
 		.pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task("sass" , function() {
-	gulp.src(["./htdocs/tab/**/*scss"])
+	gulp.src(["./htdocs/punk/**/*scss"])
 		.pipe(plumber())
 		.pipe(sass({
 			outputStyle: "expanded"
 		}))
-		.pipe(gulp.dest("./htdocs/tab/"))
+		.pipe(gulp.dest("./htdocs/punk/"))
 		.pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task("php" , function() {
-	gulp.src(["./htdocs/tab/**/*php"])
+	gulp.src(["./htdocs/punk/**/*php"])
 		.pipe(plumber())
 		.pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task("javascript" , function() {
-	gulp.src(["./htdocs/tab/**/*js"])
+	gulp.src(["./htdocs/punk/**/*js"])
 		.pipe(plumber())
 		.pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task("watch" , function() {
-	gulp.watch(["./htdocs/tab/**/*html"] , ["html"]);
-	gulp.watch(["./htdocs/tab/**/*php"] , ["php"]);
-	gulp.watch(["./htdocs/tab/**/*scss"] , ["sass"]);
-	gulp.watch(["./htdocs/tab/**/*js"] , ["javascript"]);
+	gulp.watch(["./htdocs/punk/**/*html"] , ["html"]);
+	gulp.watch(["./htdocs/punk/**/*php"] , ["php"]);
+	gulp.watch(["./htdocs/punk/**/*scss"] , ["sass"]);
+	gulp.watch(["./htdocs/punk/**/*js"] , ["javascript"]);
 });
 
 gulp.task("default" , ["browser-sync" , "watch"]); 
