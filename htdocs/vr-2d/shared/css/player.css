@@ -12,8 +12,6 @@
   border: none;
   cursor: pointer;
   outline: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
@@ -53,7 +51,6 @@
   left: 30px;
   width: 30px;
   height: 30px;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -79,7 +76,6 @@
   left: 80px;
   width: 30px;
   height: 30px;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -105,7 +101,6 @@
   left: 50%;
   font-size: 0.75rem;
   color: #fff;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -119,7 +114,6 @@
   right: 30px;
   width: 30px;
   height: 30px;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 

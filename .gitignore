@@ -1,7 +1,5 @@
 package-lock.json
 
-# node_modules以下の全てのファイルを除外
-node_modules/*
+node_modules
 
-# vendor以下の全てのファイルを除外
-vendor/*
+vendor
